@@ -94,6 +94,32 @@ const Index = () => {
     );
   }
 
+  if (isVerified) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center py-12 px-4">
+        <div className="max-w-2xl mx-auto text-center space-y-8 animate-fade-in">
+          <div className="flex justify-center gap-2 mb-6">
+            <Sparkles className="text-primary animate-pulse" size={24} />
+            <Sparkles className="text-primary animate-pulse delay-100" size={20} />
+            <Sparkles className="text-primary animate-pulse delay-200" size={24} />
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl font-serif text-primary mb-6">
+            ¡Felicidades!
+          </h1>
+          
+          <p className="text-2xl text-foreground mb-8">{config.success_message}</p>
+          
+          <div className="p-8 bg-card border-2 border-primary rounded-lg shadow-glow">
+            <code className="text-3xl md:text-4xl font-mono text-primary break-all">
+              {verificationCode}
+            </code>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background py-12 px-4">
       <div className="max-w-4xl mx-auto">
@@ -122,7 +148,7 @@ const Index = () => {
           ))}
         </div>
 
-        <div className="text-center space-y-6">
+        <div className="text-center">
           <Button
             onClick={verifyAnswers}
             size="lg"
@@ -130,17 +156,6 @@ const Index = () => {
           >
             {config.verify_button_text}
           </Button>
-
-          {isVerified && (
-            <div className="mt-8 p-8 bg-card border-2 border-primary rounded-lg shadow-glow animate-fade-in">
-              <p className="text-foreground text-xl mb-4">{config.success_message}</p>
-              <div className="bg-secondary p-6 rounded-lg border border-primary">
-                <code className="text-2xl font-mono text-primary break-all">
-                  {verificationCode}
-                </code>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>
