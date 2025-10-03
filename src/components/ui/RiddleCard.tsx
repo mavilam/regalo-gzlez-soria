@@ -26,7 +26,7 @@ export const RiddleCard = ({ riddle, values, onChange }: RiddleCardProps) => {
           <img 
             src={riddle.image_url} 
             alt={`Riddle ${riddle.id}`}
-            className="w-full h-64 object-cover"
+            className="w-full h-80 sm:h-96 md:h-80 object-cover"
           />
         </div>
       )}

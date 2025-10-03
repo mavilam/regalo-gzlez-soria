@@ -5,15 +5,16 @@ import { Button } from "@/components/ui/button";
 import { Config } from "@/types/config";
 import { useRiddleState } from "@/hooks/useRiddleState";
 import { Sparkles, RotateCcw } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import ErrorPage from "./ErrorPage";
 
 const ResultPage = () => {
   const navigate = useNavigate();
   const [config, setConfig] = useState<Config | null>(null);
   const [verificationCode, setVerificationCode] = useState("");
   const [isVerified, setIsVerified] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const { answers, clearAnswers } = useRiddleState();
-  const { toast } = useToast();
 
   useEffect(() => {
     fetch("/config.yaml")
@@ -68,14 +69,8 @@ const ResultPage = () => {
       setVerificationCode(encoded);
       setIsVerified(true);
     } else {
-      toast({
-        title: "Intenta de nuevo",
-        description: config.error_message,
-        variant: "destructive",
-      });
-      setTimeout(() => {
-        navigate("/riddle/1");
-      }, 2000);
+      setErrorMessage(config.error_message);
+      setHasError(true);
     }
   };
 
@@ -90,6 +85,10 @@ const ResultPage = () => {
         <div className="text-primary text-2xl animate-pulse">Cargando...</div>
       </div>
     );
+  }
+
+  if (hasError) {
+    return <ErrorPage errorMessage={errorMessage} />;
   }
 
   if (!isVerified) {
