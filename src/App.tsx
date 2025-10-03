@@ -15,7 +15,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/* 👇 Add the basename prop here 👇 */}
+      <BrowserRouter basename="/regalo-gzlez-soria/">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/riddle/:riddleId" element={<RiddlePage />} />
