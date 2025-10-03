@@ -1,0 +1,36 @@
+# Wedding Riddle Configuration File
+# All content is loaded dynamically from this file
+
+# General page configuration
+page_title: "Nuestra Historia en Acertijos"
+welcome_message: "Nos quedamos a una más... una copa más, un recuerdo más y una historia juntos."
+
+# Riddle definitions
+riddles:
+  - id: 1
+    title: "Acertijo 1: Donde Bailamos"
+    description: "En el corazón de la ciudad, en un lugar con nombre de gigante industrial, comenzó nuestra historia. Proporciona la latitud y longitud enteras de ese lugar. Tu respuesta es la suma de ambos números."
+    type: "dual_input"
+    correct_answer: 48
+    input_labels:
+      - "Latitud"
+      - "Longitud"
+
+  - id: 2
+    title: "Acertijo 2: El Sabor de Nuestras Noches"
+    description: "¿Recuerdas este lugar? ¿Cuánto costaba nuestro pedido favorito de 3 cervezas y nachos?"
+    type: "single_input"
+    image_url: "/images/restaurant_photo.jpg"
+    correct_answer: 5
+
+  - id: 3
+    title: "Acertijo 3: Un Recuerdo a Alta Velocidad"
+    description: "Mirando esta foto, ¿puedes calcular la velocidad (en km/h) del objeto que aparece?"
+    type: "single_input"
+    image_url: "/images/dildo_photo.jpg"
+    correct_answer: 301
+
+# User feedback messages
+success_message: "¡Has desbloqueado el recuerdo! Tu código final es:"
+error_message: "No del todo... algunos detalles están un poco borrosos. ¡Inténtalo de nuevo!"
+verify_button_text: "Verificar Respuestas"
