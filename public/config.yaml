@@ -18,14 +18,14 @@ riddles:
     title: "Acertijo 2: De antro en antro"
     description: "La Llama y el Eljomar eran nuestros antros de preferencia, pero, a veces, había que probar el mainstream. ¿Cuánto costaba el pack de 3 cervezas y nachos?"
     type: "single_input"
-    image_url: "/images/restaurant_photo.jpeg"
+    image_url: "/regalo-gzlez-soria/images/restaurant_photo.jpeg"
     correct_answer: 3
 
   - id: 3
     title: "Acertijo 3: Un Recuerdo a Alta Velocidad"
     description: "Mirando esta foto, ¿puedes calcular la velocidad máxima que alcanzó el objeto (en km/h) que aparece desde el punto de vista de un espectador que está fuera del tren?"
     type: "single_input"
-    image_url: "/images/dildo_photo.jpg"
+    image_url: "/regalo-gzlez-soria/images/dildo_photo.jpg"
     correct_answer: 300
 
 # User feedback messages
