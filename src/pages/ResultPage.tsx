@@ -17,7 +17,7 @@ const ResultPage = () => {
   const { answers, clearAnswers } = useRiddleState();
 
   useEffect(() => {
-    fetch("/config.yaml")
+    fetch("/regalo-gzlez-soria/config.yaml")
       .then((response) => response.text())
       .then((text) => {
         const parsedConfig = load(text) as Config;
