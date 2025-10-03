@@ -15,7 +15,7 @@ const Index = () => {
     // Clear any previous answers when starting fresh
     clearAnswers();
     
-    fetch("/config.yaml")
+    fetch("/regalo-gzlez-soria/config.yaml")
       .then((response) => response.text())
       .then((text) => {
         const parsedConfig = load(text) as Config;
