@@ -9,7 +9,7 @@ riddles:
     title: "Acertijo 1: Primeros experimentos"
     description: "Para llegar a alcanzar la maestría en el arte del frasco, primero hay que hacer prácticas, experimentos y aprendizajes. En el laboratorio aprendimos a tomar las mejores mezclas en vasos de precipitados ¿Podéis encontrar la ubicación correcta de nuestro lugar de prácticas?\n (Sólo necesitamos el número entero de la latitud y longitud)"
     type: "dual_input"
-    correct_answer: 48
+    correct_answer: 37
     input_labels:
       - "Latitud"
       - "Longitud"
@@ -23,10 +23,10 @@ riddles:
 
   - id: 3
     title: "Acertijo 3: Un Recuerdo a Alta Velocidad"
-    description: "Mirando esta foto, ¿puedes calcular la velocidad (en km/h) del objeto que aparece?"
+    description: "Mirando esta foto, ¿puedes calcular la velocidad máxima que alcanzó el objeto (en km/h) que aparece desde el punto de vista de un espectador que está fuera del tren?"
     type: "single_input"
     image_url: "/images/dildo_photo.jpg"
-    correct_answer: 301
+    correct_answer: 300
 
 # User feedback messages
 success_message: "¡Has desbloqueado el recuerdo! Entrega este código a la persona encargada de daros la recompensa:"
