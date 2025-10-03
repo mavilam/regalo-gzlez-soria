@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://mavilam.github.io/regalo-gzlez-soria",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
